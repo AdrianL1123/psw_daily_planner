@@ -5,12 +5,13 @@ import { Button } from "@/components/ui/button";
 import { Trash2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { format } from "date-fns";
+import { DraggableProvided } from "@hello-pangea/dnd";
 
 interface TimeBlockProps {
   hour: number;
   task: string;
   dateKey: string;
-  provided: any;
+  provided: DraggableProvided;
   handleTaskChange: (hour: number, task: string) => void;
   clearTask: (hour: number) => void;
 }

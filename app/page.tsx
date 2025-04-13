@@ -7,6 +7,7 @@ import { getStoredValue, setStoredValue } from "@/lib/utils";
 import { QuoteDisplay } from "./_components/quote-display";
 import { PlannerHeader } from "./_components/planner-header";
 import { TaskList } from "./_components/task-list";
+import { DropResult } from "@hello-pangea/dnd";
 
 export default function DailyPlanner() {
   const [tasks, setTasks] = useState<Record<string, Record<number, string>>>(
@@ -56,7 +57,7 @@ export default function DailyPlanner() {
   };
 
   // Handle drag end event
-  const onDragEnd = (result: any) => {
+  const onDragEnd = (result: DropResult) => {
     if (!result.destination) return;
 
     const items = Array.from(timeSlots);

@@ -1,13 +1,19 @@
 "use client";
 
-import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
+import {
+  DragDropContext,
+  Droppable,
+  Draggable,
+  DraggableProvided,
+  DropResult,
+} from "@hello-pangea/dnd";
 import { TimeBlock } from "./time-block";
 
 interface TaskListProps {
   timeSlots: number[];
   tasks: { [hour: string]: string };
   dateKey: string;
-  onDragEnd: (result: any) => void;
+  onDragEnd: (result: DropResult) => void;
   handleTaskChange: (hour: number, task: string) => void;
   clearTask: (hour: number) => void;
 }
