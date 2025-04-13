@@ -4,7 +4,6 @@ import {
   DragDropContext,
   Droppable,
   Draggable,
-  DraggableProvided,
   DropResult,
 } from "@hello-pangea/dnd";
 import { TimeBlock } from "./time-block";

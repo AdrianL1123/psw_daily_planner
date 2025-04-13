@@ -43,7 +43,7 @@ export function QuoteDisplay() {
 
   return (
     <div className="flex bg-muted rounded-lg m-5 p-5">
-      <blockquote className="italic font-bold">"{quote.content}"</blockquote>
+      <p className="italic font-bold">{`"${quote.content}"`}</p>
       <span className="text-muted-foreground mx-2 pl-5">— {quote.author}</span>
     </div>
   );
