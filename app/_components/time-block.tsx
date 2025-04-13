@@ -27,7 +27,7 @@ export function TimeBlock({
 
   // Get time block color based on current time
   const getTimeBlockColor = (hour: number) => {
-    // Only apply color coding for today
+    // Only apply diff color for the day
     if (format(new Date(), "yyyy-MM-dd") !== dateKey) {
       return "bg-secondary/50";
     }
